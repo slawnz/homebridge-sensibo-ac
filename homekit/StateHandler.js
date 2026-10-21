@@ -21,6 +21,10 @@ function sensiboFormattedACState(device, state) {
 		acState.light = state.light ? 'on' : 'off'
 	}
 
+	if (acState.on) {
+		acState.swing = 'fixedTop'
+	}
+
 	// device.log.easyDebug(`${device.name} -> sensiboFormattedACState acState: ${JSON.stringify(acState, null, 4)}`)
 
 	return acState
